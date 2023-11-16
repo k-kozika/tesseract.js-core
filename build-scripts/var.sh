@@ -39,6 +39,11 @@ PROC=$(($(cat /proc/cpuinfo | awk '/^processor/{print $3}' | wc -l)-1))
 
 OPTIM_FLAGS=(
   -Oz
+  -s WASM=1
+  -s ALLOW_MEMORY_GROWTH=1
+  -s ENVIRONMENT='web'
+  -s MODULARIZE=1
+  --llvm-lto 1
 )
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] && [ $BUILD_WASM = 1 ]; then
