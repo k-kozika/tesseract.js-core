@@ -266,3 +266,6 @@ else if (typeof define === 'function' && define['amd'])
   define([], function() { return TesseractCore; });
 else if (typeof exports === 'object')
   exports["TesseractCore"] = TesseractCore;
+
+
+export {TesseractCore}
