@@ -38,7 +38,7 @@ BUILD_CLEAN=1
 PROC=$(($(cat /proc/cpuinfo | awk '/^processor/{print $3}' | wc -l)-1))
 
 OPTIM_FLAGS=(
-  -O3
+  -Oz
 )
 
 if [[ "$OSTYPE" == "linux-gnu"* ]] && [ $BUILD_WASM = 1 ]; then
