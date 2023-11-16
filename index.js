@@ -1,3 +1,4 @@
-const tessJS = require("./tesseract-core-simd-lstm.js");
+import {TesseractCore} from "./tesseract-core"
+import wasm from "./tesseract-core.wasm"
 
-module.exports = tessJS
+export {TesseractCore,wasm}
